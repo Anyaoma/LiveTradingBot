@@ -27,7 +27,7 @@ This project was built to:
 
 ## Bot Structure / Architecture
 
-<pre> ```text +------------------+
+<pre>  +------------------+
 |  Data Collector  |
 +------------------+
           |
@@ -50,6 +50,6 @@ This project was built to:
 +------------------+
 | Logging & Alerts |
 +------------------+
- ``` </pre>
+  </pre>
 
 
