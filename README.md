@@ -106,7 +106,7 @@ This ensures the bot locks in gains while capping downside risk, without needing
 Clone the repository:
 
 ```bash
-git clone https://github.com/Anyaoma/quant-tech-bot.git
+git clone https://github.com/Anyaoma/LiveTradingBot.git
 ```
 
 Install dependencies:
