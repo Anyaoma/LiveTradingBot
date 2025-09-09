@@ -107,11 +107,14 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Anyaoma/quant-tech-bot.git
-cd quant-tech-bot
+```
 
 Install dependencies:
-
+```bash
 pip install -r requirements.txt
+```
 
 Start live trading:
-python live_trade.py --strategy momentum_trend
+```bash
+python Bot.py
+```
