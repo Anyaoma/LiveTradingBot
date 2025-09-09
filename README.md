@@ -55,4 +55,45 @@ The trade manager class answers the question "Can we trade?" by ensuring conditi
 
   </pre>
 
+## Strategy Overview
+
+This strategy combines the MACD indicator with the Stochastic Oscillator to identify high-probability reversal points. The goal is to trade when momentum shifts occur at market extremes.
+
+Indicators Used
+
+- MACD (Moving Average Convergence Divergence): Tracks momentum by comparing the difference between short- and long-term EMAs. A crossover between the MACD line and its Signal line indicates a potential trend reversal.
+
+- Stochastic Oscillator (%K): Measures the current price relative to its range over a lookback period. Used here to detect overbought (>80) and oversold (<20) conditions.
+
+### Entry Rules
+
+Buy (Long) Signal:
+
+MACD line crosses above its Signal line (bullish crossover).
+
+Previous MACD was below the Signal line.
+
+Stochastic indicates the market is oversold (<20).
+
+
+### Sell (Short) Signal:
+
+MACD line crosses below its Signal line (bearish crossover).
+
+Previous MACD was above the Signal line.
+
+Stochastic indicates the market is overbought (>80).
+
+
+### Exit Rules
+
+Trailing stop was used 
+
+Strategy Nature
+
+This is a momentum reversal strategy:
+
+MACD detects the change in momentum direction.
+
+Stochastic ensures trades are only taken when the market is at an extreme condition, filtering out false signals.
 
