@@ -27,10 +27,6 @@ This project was built to:
 
 ## Bot Structure / Architecture
 
-flowchart TD
-    A[Data Collector] --> B[Signal Generator]
-    B --> C[Risk Management]
-    C --> D[Execution Engine]
-    D --> E[Logging & Alerts]
+<pre> ```text +------------------+ | Data Collector | +------------------+ | v +------------------+ | Signal Generator | +------------------+ | v +------------------+ | Risk Management | +------------------+ | v +------------------+ | Execution Engine | +------------------+ | v +------------------+ | Logging & Alerts | +------------------+ ``` </pre>
 
 
