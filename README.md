@@ -101,4 +101,17 @@ For Short Positions (SELL):
 
 This ensures the bot locks in gains while capping downside risk, without needing constant manual monitoring. 
 
+## How to Run
 
+Clone the repository:
+
+```bash
+git clone https://github.com/Anyaoma/quant-tech-bot.git
+cd quant-tech-bot
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Start live trading:
+python live_trade.py --strategy momentum_trend
