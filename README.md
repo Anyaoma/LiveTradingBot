@@ -27,29 +27,32 @@ This project was built to:
 
 ## Bot Structure / Architecture
 
-<pre>  +------------------+
-|  Data Collector  |
+In terms of the structure of the bot, there is the bot class thats going to contain a candle manager class, a technical class, and a trade manager class. 
+
+The bot class will have the log files set up. 
+
+The candle manager class answers the query "Do we have a new candle?" It will load up the candle, process them and answer the question of whether there is a new candle.
+
+The technicals manager class answers the query "Do we have a signal?". To illustrate, if there is a new candle, we pass the candles we loaded from the candle manager class, and the Technicals class will identify the signals.
+
+The trade manager class answers the question "Can we trade?" by ensuring conditions are accurate to trade, and finally, if it can, it will then place the trade.
+
+<pre> Bot----------|
+                    
++------------------+
+|  Candle Manager  |
 +------------------+
           |
           v
-+------------------+
-| Signal Generator |
-+------------------+
++--------------------+
+| Technicals Manager |
++--------------------+
           |
           v
 +------------------+
-| Risk Management  |
+| Trade Manager    |
 +------------------+
-          |
-          v
-+------------------+
-| Execution Engine |
-+------------------+
-          |
-          v
-+------------------+
-| Logging & Alerts |
-+------------------+
+
   </pre>
 
 
