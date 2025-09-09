@@ -24,5 +24,31 @@ This project was built to:
 - If there is indeed a trading signal, it's then going to ask; "Can I place a trade?". Under the hood, the bot can confirm if conditions are right to actually place a trade. For example, if the plan is to avoid placing multiple trades on a single asset, the bot will confirm that there isn't a position running on that asset.
 - If it is confirmed that a trade can be placed, then the bot places a trade.
 - If any of the conditions above don't align, the bot sleeps for a few seconds before loading another set of candles and repeating the cycle as detailed above.
-- 
+
+## Bot Structure / Architecture
+
++------------------+
+|  Data Collector  |
++------------------+
+          |
+          v
++------------------+
+| Signal Generator |
++------------------+
+          |
+          v
++------------------+
+| Risk Management  |
++------------------+
+          |
+          v
++------------------+
+| Execution Engine |
++------------------+
+          |
+          v
++------------------+
+| Logging & Alerts |
++------------------+
+
 
