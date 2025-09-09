@@ -37,7 +37,7 @@ The technicals manager class answers the query "Do we have a signal?". To illust
 
 The trade manager class answers the question "Can we trade?" by ensuring conditions are accurate to trade, and finally, if it can, it will then place the trade.
 
-<pre> Bot----------|
+<pre> Bot-----|
                     
 +------------------+
 |  Candle Manager  |
