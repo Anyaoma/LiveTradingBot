@@ -65,7 +65,7 @@ Indicators Used
 
 - Stochastic Oscillator (%K): Measures the current price relative to its range over a lookback period. Used here to detect overbought (>80) and oversold (<20) conditions.
 
-### Entry Rules
+#### Entry Rules
 
 Buy (Long) Signal:
 
@@ -76,7 +76,7 @@ Previous MACD was below the Signal line.
 Stochastic indicates the market is oversold (<20).
 
 
-### Sell (Short) Signal:
+#### Sell (Short) Signal:
 
 MACD line crosses below its Signal line (bearish crossover).
 
@@ -85,15 +85,24 @@ Previous MACD was above the Signal line.
 Stochastic indicates the market is overbought (>80).
 
 
-### Exit Rules
+#### Exit Rules
 
-Trailing stop was used 
+Once a trade is entered, the bot automatically places a trailing stop order to protect profits and limit losses:
 
-Strategy Nature
+For Long Positions (BUY):
+A trailing stop sell order is placed at 1.5% below the highest price reached after entry.
 
-This is a momentum reversal strategy:
+If the price rises, the stop price moves up with it.
 
-MACD detects the change in momentum direction.
+If the price falls more than 1.5% from its peak, the position is closed.
 
-Stochastic ensures trades are only taken when the market is at an extreme condition, filtering out false signals.
+For Short Positions (SELL):
+A trailing stop buy order is placed at 1.5% above the lowest price reached after entry.
+
+If the price drops, the stop price follows down.
+
+If the price rises more than 1.5% from its lowest point, the position is closed.
+
+This ensures the bot locks in gains while capping downside risk, without needing constant manual monitoring. 
+
 
