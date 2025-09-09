@@ -9,13 +9,20 @@ The bot integrates data acquisition, strategy logic, risk management, error log,
 
 ## Motivation / Background
 
-Manual tradi
+This project was built to:
+
+- Automate a trading strategy with precision that can run 24/7
+
+- Provide real-time monitoring and execution using log files
+
+- Enable scalability across multiple assets
 
 ## How the Bot works
-- The Bot will be started, and it will create some log files that will be used to log information on relevant executions per asset.
-- The Bot enters an infinite loop, which involves loading some candles from the Alpaca API and asking; do we have a new candle?
-- If there is indeed a new candle, its will try to identify from the loaded candles a trading signal.
-- If there is indeed a trading signal, its then going to ask; 'can I place a trade?'. Under the hood the boot could confirm if conditions are right to actually place a trade, e.g if the plan is to avoid placing multiple trades on a single asset, the bot will confirm that there isnt a position running on that asset.
+- The Bot will be started, and it will create some log files that will be used to log information on each asset.
+- The Bot enters an infinite loop, where it loads some candles from the Alpaca API and asks; "Do we have a new candle?"
+- If there is indeed a new candle, it will try to identify from the loaded candles a trading signal.
+- If there is indeed a trading signal, it's then going to ask; "Can I place a trade?". Under the hood, the bot can confirm if conditions are right to actually place a trade. For example, if the plan is to avoid placing multiple trades on a single asset, the bot will confirm that there isn't a position running on that asset.
 - If it is confirmed that a trade can be placed, then the bot places a trade.
-- If any of the conditions above dont align, the bot sleeps for a few seconds before loading another set of candles
+- If any of the conditions above don't align, the bot sleeps for a few seconds before loading another set of candles and repeating the cycle as detailed above.
+- 
 
